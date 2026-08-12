@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Thesis Writing | Mission Doctorate",
+  title: "Thesis Writing & Research Assistance | Manuscriptome",
   description:
-    "Professional thesis writing and research assistance. Mission Doctorate — helping researchers achieve academic excellence.",
+    "Professional thesis writing and research assistance. Manuscriptome — helping researchers achieve academic excellence.",
 };
 
 export default function RootLayout({

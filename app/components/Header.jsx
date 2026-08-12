@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-all">
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-20">
         <div className="flex justify-between items-center h-24">
-          
+
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-light to-brand flex items-center justify-center shadow-lg shadow-brand/30">
@@ -27,7 +27,7 @@ export default function Header() {
               </svg>
             </div>
             <span className="font-bold text-3xl tracking-tight text-brand">
-              NP BioPharma
+              Manuscriptome
             </span>
           </div>
 
@@ -36,7 +36,7 @@ export default function Header() {
             <Link href="/" className="text-lg text-gray-600 hover:text-brand font-medium transition-colors">
               Home
             </Link>
-            
+
             <Link href="/services" className="text-lg text-gray-600 hover:text-brand font-medium transition-colors">
               Services
             </Link>
@@ -57,15 +57,15 @@ export default function Header() {
 
           {/* Contact Button & Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="hidden md:inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-brand rounded-full hover:bg-brand-dark hover:shadow-lg hover:shadow-brand/30 transition-all duration-200 active:scale-95"
             >
               Contact Us
             </Link>
 
             {/* Mobile menu button */}
-            <button 
+            <button
               className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 focus:outline-none"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -85,22 +85,22 @@ export default function Header() {
       <div className={`md:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="px-4 pt-2 pb-6 space-y-1 bg-white border-t border-gray-100 shadow-xl">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
+            <Link
+              key={link.name}
               href={link.href}
               className="block px-3 py-3 text-base font-medium text-gray-700 rounded-lg hover:text-brand hover:bg-brand/5"
             >
               {link.name}
             </Link>
           ))}
-          <Link 
+          <Link
             href="/services"
             className="block px-3 py-3 text-base font-medium text-gray-700 rounded-lg hover:text-brand hover:bg-brand/5"
           >
             Services
           </Link>
           <div className="pt-4 pb-2">
-            <Link 
+            <Link
               href="/contact"
               className="flex w-full items-center justify-center px-4 py-3 text-base font-semibold text-white bg-brand rounded-xl hover:bg-brand-dark"
             >

@@ -3,13 +3,13 @@ import React from 'react';
 const Contact = () => {
   return (
     <div className="w-full min-h-screen bg-gray-50 flex flex-col font-sans">
-      
+
       {/* Hero Section */}
       <section className="relative w-full py-20 md:py-32 overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#142d53] to-brand z-0"></div>
         {/* Subtle background overlay pattern */}
         <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-md">
             Get In Touch
@@ -23,9 +23,9 @@ const Contact = () => {
       {/* Main Content: Contact Layout */}
       <section className="w-full py-20 px-6 md:px-12 bg-white flex-1">
         <div className="max-w-screen-2xl mx-auto">
-          
+
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-            
+
             {/* Left Column: Contact Information */}
             <div className="lg:w-5/12 flex flex-col justify-center">
               <h2 className="text-3xl md:text-4xl font-bold text-[#142d53] mb-6">
@@ -87,7 +87,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-6">
                     <h3 className="text-xl font-bold text-[#142d53] mb-1">Corporate Office</h3>
-                    <p className="text-gray-600">NP BioPharma Headquarters</p>
+                    <p className="text-gray-600">Manuscriptome Headquarters</p>
                     <p className="text-gray-600">Global Research Park, Building 4</p>
                   </div>
                 </div>
@@ -99,27 +99,27 @@ const Contact = () => {
             <div className="lg:w-7/12">
               <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
                 <h3 className="text-2xl font-bold text-[#142d53] mb-8">Send Us a Message</h3>
-                
+
                 <form className="space-y-6">
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Full Name */}
                     <div>
                       <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                      <input 
-                        type="text" 
-                        id="name" 
+                      <input
+                        type="text"
+                        id="name"
                         className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
                         placeholder="John Doe"
                       />
                     </div>
-                    
+
                     {/* Email */}
                     <div>
                       <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                      <input 
-                        type="email" 
-                        id="email" 
+                      <input
+                        type="email"
+                        id="email"
                         className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
                         placeholder="john@example.com"
                       />
@@ -130,19 +130,19 @@ const Contact = () => {
                     {/* Phone Number */}
                     <div>
                       <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                      <input 
-                        type="tel" 
-                        id="phone" 
+                      <input
+                        type="tel"
+                        id="phone"
                         className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
                         placeholder="+1 (555) 000-0000"
                       />
                     </div>
-                    
+
                     {/* Service Type */}
                     <div>
                       <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">Service Required</label>
-                      <select 
-                        id="service" 
+                      <select
+                        id="service"
                         className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors text-gray-700"
                       >
                         <option value="">Select a service...</option>
@@ -160,8 +160,8 @@ const Contact = () => {
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Your Message / Research Topic</label>
-                    <textarea 
-                      id="message" 
+                    <textarea
+                      id="message"
                       rows={5}
                       className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors resize-none"
                       placeholder="Tell us about your research objectives and how we can assist you..."
@@ -169,8 +169,8 @@ const Contact = () => {
                   </div>
 
                   {/* Submit Button */}
-                  <button 
-                    type="button" 
+                  <button
+                    type="button"
                     className="w-full py-4 text-lg font-bold text-white bg-[#ce1836] rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-500/30 hover:shadow-xl hover:-translate-y-1 transform duration-200"
                   >
                     Submit Enquiry

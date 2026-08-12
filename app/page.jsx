@@ -29,7 +29,7 @@ const page = () => {
       <section className='w-full py-16 md:py-24 px-6 md:px-12'>
         <div className='max-w-4xl mx-auto text-center'>
           <h1 className='text-3xl md:text-5xl font-bold text-gray-900 mb-6'>
-            Welcome to <span className='text-brand'>NP BioPharma</span>
+            Welcome to <span className='text-brand'>Manuscriptome</span>
           </h1>
           <p className='text-lg md:text-xl text-gray-600 leading-relaxed mb-8'>
             We provide expert guidance and academic excellence. Your companion for exceptional research support, helping you transform ideas into published research.
@@ -48,7 +48,7 @@ const page = () => {
           <div className='flex justify-center mb-16'>
             <div className='border-[3px] border-brand rounded-full px-8 py-3 md:px-12 md:py-4 shadow-sm'>
               <h2 className='text-2xl md:text-4xl font-black text-brand uppercase tracking-wide'>
-                NP BIOPHARMA - OUR TOP SERVICES
+                Manuscriptome - OUR TOP SERVICES
               </h2>
             </div>
           </div>
@@ -58,22 +58,22 @@ const page = () => {
             <div className='flex flex-col justify-center pl-6 lg:pl-0'>
               <ul className='space-y-6 list-disc list-outside text-gray-600 text-lg leading-relaxed marker:text-gray-500'>
                 <li>
-                  <strong className='text-gray-900'>Thesis Writing:</strong> NP BioPharma provides comprehensive support for writing. This includes assistance with topic selection, literature review, methodology, data analysis, discussion, and conclusion sections.
+                  <strong className='text-gray-900'>Thesis Writing:</strong> Manuscriptome provides comprehensive support for writing. This includes assistance with topic selection, literature review, methodology, data analysis, discussion, and conclusion sections.
                 </li>
                 <li>
-                  <strong className='text-gray-900'>Research Paper:</strong> NP BioPharma offers assistance with all stages of research paper writing, from conceptualization to publication which help with defining research objectives, conducting literature reviews & designing methodologies.
+                  <strong className='text-gray-900'>Research Paper:</strong> Manuscriptome offers assistance with all stages of research paper writing, from conceptualization to publication which help with defining research objectives, conducting literature reviews & designing methodologies.
                 </li>
                 <li>
-                  <strong className='text-gray-900'>Publication Support:</strong> NP BioPharma guides researchers through the publication process, from selecting appropriate journals to formatting manuscripts and addressing reviewer feedback. By providing insights into journal selection criteria.
+                  <strong className='text-gray-900'>Publication Support:</strong> Manuscriptome guides researchers through the publication process, from selecting appropriate journals to formatting manuscripts and addressing reviewer feedback. By providing insights into journal selection criteria.
                 </li>
                 <li>
-                  <strong className='text-gray-900'>Synopsis Writing:</strong> NP BioPharma assists researchers in crafting concise and compelling synopsis that effectively summarize the key aspects of their research projects.
+                  <strong className='text-gray-900'>Synopsis Writing:</strong> Manuscriptome assists researchers in crafting concise and compelling synopsis that effectively summarize the key aspects of their research projects.
                 </li>
                 <li>
-                  <strong className='text-gray-900'>Dissertation Assistance:</strong> NP BioPharma offers comprehensive support for graduate students undertaking dissertations. This includes guidance on topic selection, proposal development, literature review & research design.
+                  <strong className='text-gray-900'>Dissertation Assistance:</strong> Manuscriptome offers comprehensive support for graduate students undertaking dissertations. This includes guidance on topic selection, proposal development, literature review & research design.
                 </li>
                 <li>
-                  <strong className='text-gray-900'>Data Analysis:</strong> NP BioPharma assists in analyzing your research data using various statistical and analytical methods. They help interpret the results accurately and present them clearly, ensuring the data supports your research objectives and findings effectively.
+                  <strong className='text-gray-900'>Data Analysis:</strong> Manuscriptome assists in analyzing your research data using various statistical and analytical methods. They help interpret the results accurately and present them clearly, ensuring the data supports your research objectives and findings effectively.
                 </li>
               </ul>
             </div>
@@ -90,7 +90,7 @@ const page = () => {
 
               <img
                 src="/second.png"
-                alt="NP BioPharma Services Illustration"
+                alt="Manuscriptome Services Illustration"
                 className="relative w-full h-full object-contain z-10"
               />
             </div>

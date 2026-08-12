@@ -61,19 +61,19 @@ const Guarantees = () => {
 
   return (
     <div className="w-full min-h-screen bg-gray-50 flex flex-col font-sans">
-      
+
       {/* Hero Section */}
       <section className="relative w-full py-20 md:py-32 overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#142d53] to-brand z-0"></div>
         {/* Subtle background overlay pattern */}
         <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-md">
             Our Ironclad Guarantees
           </h1>
           <p className="text-lg md:text-2xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
-            When you partner with NP BioPharma, your success, privacy, and peace of mind are absolutely guaranteed.
+            When you partner with Manuscriptome, your success, privacy, and peace of mind are absolutely guaranteed.
           </p>
         </div>
       </section>
@@ -81,7 +81,7 @@ const Guarantees = () => {
       {/* Main Content: Guarantees Grid */}
       <section className="w-full py-20 px-6 md:px-12 bg-white">
         <div className="max-w-screen-2xl mx-auto">
-          
+
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#142d53] mb-4 relative inline-block">
               Promises We Keep
@@ -94,18 +94,18 @@ const Guarantees = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {guaranteesList.map((guarantee, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden flex flex-col items-center text-center"
               >
                 {/* Decorative background glow on hover */}
                 <div className="absolute -top-32 -right-32 w-64 h-64 bg-brand/5 rounded-full blur-3xl group-hover:bg-brand/10 transition-colors duration-500"></div>
-                
+
                 {/* Icon Container */}
                 <div className="relative z-10 w-20 h-20 bg-gradient-to-br from-[#ce1836] to-red-600 rounded-2xl flex items-center justify-center shadow-lg shadow-red-500/30 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 mb-6">
                   {guarantee.icon}
                 </div>
-                
+
                 {/* Content */}
                 <h3 className="relative z-10 text-2xl font-bold text-[#142d53] mb-4">
                   {guarantee.title}
@@ -155,8 +155,8 @@ const Guarantees = () => {
             Experience risk-free, guaranteed academic assistance. Let our experts with 10+ years of experience handle your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="px-8 py-4 text-lg font-bold text-white bg-[#ce1836] rounded-full hover:bg-red-700 transition-colors shadow-lg shadow-red-500/30 hover:shadow-xl hover:-translate-y-1 transform duration-200"
             >
               Get Started Now

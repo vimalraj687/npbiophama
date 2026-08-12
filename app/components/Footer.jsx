@@ -4,10 +4,10 @@ export default function Footer() {
   return (
     <footer className="w-full bg-brand text-white py-12 px-6 md:px-12 mt-auto">
       <div className="w-full max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 lg:divide-x divide-white/20">
-        
+
         {/* Column 1: About */}
         <div className="flex flex-col">
-          <h3 className="text-xl font-bold uppercase mb-6 tracking-wide">NP BIOPHARMA</h3>
+          <h3 className="text-xl font-bold uppercase mb-6 tracking-wide">Manuscriptome</h3>
           <p className="text-sm leading-relaxed text-gray-100">
             Our dedication and efforts have been resulted in tremendous accomplishments and every single achievement of our candidates motivates us to bring even more perfection to our services. We feel so honored as our candidates have been earning a plenty of benefits right after the completion of their education. The benefits are multiples such as social benefits.
           </p>
@@ -59,13 +59,13 @@ export default function Footer() {
         <div className="flex flex-col lg:pl-12">
           <h3 className="text-xl font-bold uppercase mb-6 tracking-wide">MAP</h3>
           <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden shadow-inner">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.677953705257!2d81.0441584!3d26.8821952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be1ab2a714c69%3A0xcda8d7e909a34bc3!2sChinhat%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14234.677953705257!2d81.0441584!3d26.8821952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be1ab2a714c69%3A0xcda8d7e909a34bc3!2sChinhat%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade">
             </iframe>
           </div>

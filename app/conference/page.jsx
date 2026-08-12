@@ -118,7 +118,7 @@ const Conference = () => {
               <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#ce1836] rounded-full"></span>
             </h2>
             <p className="mt-8 text-gray-600 max-w-2xl mx-auto text-lg">
-              From selecting the right conference to formatting your final manuscript, NP BioPharma provides comprehensive support at every stage.
+              From selecting the right conference to formatting your final manuscript, Manuscriptome provides comprehensive support at every stage.
             </p>
           </div>
 
@@ -157,7 +157,7 @@ const Conference = () => {
             Partnered Upcoming Conferences
           </h3>
           <p className="text-gray-600 text-lg mb-8">
-            NP BioPharma frequently partners with major international conferences. Keep an eye out for our upcoming partnered events, or contact us directly to find the best immediate opportunities for your research domain.
+            Manuscriptome frequently partners with major international conferences. Keep an eye out for our upcoming partnered events, or contact us directly to find the best immediate opportunities for your research domain.
           </p>
         </div>
       </section>
