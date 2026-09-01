@@ -1,193 +1,205 @@
-import React from 'react';
+"use client";
 
-const Contact = () => {
+import React, { useState } from "react";
+
+export default function ContactPage() {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
-    <div className="w-full min-h-screen bg-gray-50 flex flex-col font-sans">
-
-      {/* Hero Section */}
-      <section className="relative w-full py-20 md:py-32 overflow-hidden flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#142d53] to-brand z-0"></div>
-        {/* Subtle background overlay pattern */}
-        <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-md">
-            Get In Touch
+    <div className="w-full min-h-screen bg-slate-50 py-12 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-xs font-extrabold uppercase tracking-widest text-[#2E3192] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
+            Contact Manuscriptome
+          </span>
+          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 mt-4 mb-4">
+            Get in Touch with Our <span className="text-[#2E3192]">Scientific Editors</span>
           </h1>
-          <p className="text-lg md:text-2xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
-            Ready to accelerate your research? Contact our team of experts for 24/7 support and personalized guidance.
+          <p className="text-slate-600 text-base sm:text-lg">
+            Feel free to call or WhatsApp us anytime. Manuscript preparation and journal selection guidance is <strong>Charge-Free</strong>.
           </p>
         </div>
-      </section>
 
-      {/* Main Content: Contact Layout */}
-      <section className="w-full py-20 px-6 md:px-12 bg-white flex-1">
-        <div className="max-w-screen-2xl mx-auto">
-
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-
-            {/* Left Column: Contact Information */}
-            <div className="lg:w-5/12 flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#142d53] mb-6">
-                Let's Discuss Your Project
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-10">
-                Whether you need help with thesis writing, data analysis, or publishing in top-tier international journals, our 547+ experts are here to help. Reach out to us through any of the channels below.
-              </p>
-
-              <div className="space-y-8">
-                {/* 24/7 Support */}
-                <div className="flex items-start">
-                  <div className="w-14 h-14 bg-red-50 text-[#ce1836] rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-[#142d53] mb-1">24/7 Enquiry Support</h3>
-                    <p className="text-gray-600">Our support team is always available around the clock to answer your queries.</p>
-                  </div>
-                </div>
-
-                {/* Email Address */}
-                <div className="flex items-start">
-                  <div className="w-14 h-14 bg-brand/5 text-brand rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-[#142d53] mb-1">Email Us</h3>
-                    <p className="text-gray-600">info@npbiopharma.com</p>
-                    <p className="text-gray-600">support@npbiopharma.com</p>
-                  </div>
-                </div>
-
-                {/* Phone Number */}
-                <div className="flex items-start">
-                  <div className="w-14 h-14 bg-brand/5 text-brand rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-[#142d53] mb-1">Call Us</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-500 text-sm mt-1">Direct conference calls with experts available upon request.</p>
-                  </div>
-                </div>
-
-                {/* Location */}
-                <div className="flex items-start">
-                  <div className="w-14 h-14 bg-brand/5 text-brand rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div className="ml-6">
-                    <h3 className="text-xl font-bold text-[#142d53] mb-1">Corporate Office</h3>
-                    <p className="text-gray-600">Manuscriptome Headquarters</p>
-                    <p className="text-gray-600">Global Research Park, Building 4</p>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16">
+          
+          {/* Contact Details Column */}
+          <div className="lg:col-span-5 space-y-6">
+            
+            {/* Phone & WhatsApp Card */}
+            <div className="bg-white p-7 rounded-3xl border border-slate-200 shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#2E3192] flex items-center justify-center text-xl mb-4 border border-blue-100">
+                📱
               </div>
-
+              <h3 className="font-extrabold text-slate-900 text-xl mb-1">
+                Mobile & WhatsApp
+              </h3>
+              <p className="text-xs text-slate-500 mb-3">Available 24/7 for urgent thesis or paper queries</p>
+              <a
+                href="tel:+917991337001"
+                className="text-lg font-black text-[#2E3192] hover:underline block"
+              >
+                +91 799-133-7001
+              </a>
+              <div className="mt-4">
+                <a
+                  href="https://wa.me/917991337001?text=Hello%20Manuscriptome,%20I%20want%20to%20inquire%20about%20medical%20writing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2E3192] hover:bg-[#232569] text-white font-bold text-xs shadow-md transition-all"
+                >
+                  Chat Immediately on WhatsApp →
+                </a>
+              </div>
             </div>
 
-            {/* Right Column: Contact Form */}
-            <div className="lg:w-7/12">
-              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100">
-                <h3 className="text-2xl font-bold text-[#142d53] mb-8">Send Us a Message</h3>
+            {/* Email Card */}
+            <div className="bg-white p-7 rounded-3xl border border-slate-200 shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#2E3192] flex items-center justify-center text-xl mb-4 border border-blue-100">
+                ✉️
+              </div>
+              <h3 className="font-extrabold text-slate-900 text-xl mb-1">
+                Email Address
+              </h3>
+              <p className="text-xs text-slate-500 mb-3">Send your manuscript drafts, raw data, or synopses</p>
+              <a
+                href="mailto:manuscriptome@gmail.com"
+                className="text-base font-bold text-[#2E3192] hover:underline block"
+              >
+                manuscriptome@gmail.com
+              </a>
+            </div>
 
-                <form className="space-y-6">
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Full Name */}
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
-                        placeholder="John Doe"
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
-                      <input
-                        type="email"
-                        id="email"
-                        className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Phone Number */}
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors"
-                        placeholder="+1 (555) 000-0000"
-                      />
-                    </div>
-
-                    {/* Service Type */}
-                    <div>
-                      <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">Service Required</label>
-                      <select
-                        id="service"
-                        className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors text-gray-700"
-                      >
-                        <option value="">Select a service...</option>
-                        <option value="thesis">Thesis Writing</option>
-                        <option value="research-paper">Research Paper Assistance</option>
-                        <option value="publication">Publication Support (SCI/Scopus)</option>
-                        <option value="synopsis">Synopsis Writing</option>
-                        <option value="data-analysis">Data Analysis</option>
-                        <option value="conference">Conference Support</option>
-                        <option value="other">Other / Custom Query</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">Your Message / Research Topic</label>
-                    <textarea
-                      id="message"
-                      rows={5}
-                      className="w-full px-5 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand/30 focus:border-brand transition-colors resize-none"
-                      placeholder="Tell us about your research objectives and how we can assist you..."
-                    ></textarea>
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="button"
-                    className="w-full py-4 text-lg font-bold text-white bg-[#ce1836] rounded-xl hover:bg-red-700 transition-colors shadow-lg shadow-red-500/30 hover:shadow-xl hover:-translate-y-1 transform duration-200"
-                  >
-                    Submit Enquiry
-                  </button>
-                  <p className="text-center text-sm text-gray-500 mt-4">
-                    Your information is 100% secure. We adhere to strict NDAs.
-                  </p>
-                </form>
-
+            {/* Branch Offices & Compliance */}
+            <div className="bg-slate-900 text-white p-7 rounded-3xl border border-slate-800 space-y-3 text-xs">
+              <h4 className="font-extrabold text-amber-400 text-sm uppercase tracking-wider">
+                Branch Offices & Support Network
+              </h4>
+              <p className="text-slate-300 leading-relaxed">
+                Our scientific writing and biostatistical editors operate across Lucknow, Kanpur, Delhi NCR, and Central India, assisting medical research scholars nationwide.
+              </p>
+              <div className="pt-2 border-t border-slate-800 text-slate-400">
+                ✓ Privacy Guarantee: Raw patient data and hospital records remain 100% confidential.
               </div>
             </div>
 
           </div>
+
+          {/* Consultation Form Column */}
+          <div className="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-xl">
+            <h2 className="text-2xl font-extrabold text-slate-900 mb-2">
+              Send Your Inquiry
+            </h2>
+            <p className="text-xs text-slate-500 mb-6">
+              Fill out the details below and our senior editor will get back to you shortly.
+            </p>
+
+            {submitted ? (
+              <div className="p-6 rounded-2xl bg-blue-50 border border-blue-200 text-[#2E3192] text-center space-y-2">
+                <div className="text-3xl">🎉</div>
+                <h3 className="font-extrabold text-lg">Thank You!</h3>
+                <p className="text-xs text-slate-700">
+                  Your message has been received. Our team will contact you via WhatsApp/Phone within a few hours.
+                </p>
+              </div>
+            ) : (
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setSubmitted(true);
+                }}
+                className="space-y-4"
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Your Full Name *</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Dr. Full Name"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192]"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Mobile / WhatsApp *</label>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="+91 7991337001"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192]"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="doctor@gmail.com"
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192]"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Medical Department / Specialty *</label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="e.g. General Medicine, Orthopedics..."
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192]"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Required Service *</label>
+                  <select className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192]">
+                    <option>MD/MS Research Paper Writing & Publication</option>
+                    <option>Systematic Review & Meta-Analysis</option>
+                    <option>PG / MD / MS / DM / MCh Thesis Writing</option>
+                    <option>Medical Statistics & SPSS Analysis</option>
+                    <option>Book Writing & Publication with ISBN</option>
+                    <option>Project / Grant Proposal</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Message / Requirements</label>
+                  <textarea
+                    rows={4}
+                    placeholder="Describe your study title, deadline, or data available..."
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192]"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-3.5 px-6 rounded-xl bg-[#2E3192] hover:bg-[#232569] text-white font-bold text-xs shadow-md transition-all active:scale-95"
+                >
+                  Submit Inquiry Now →
+                </button>
+              </form>
+            )}
+          </div>
+
         </div>
-      </section>
+
+        {/* Privacy Policy & Disclaimer Banner */}
+        <div className="bg-white p-8 rounded-3xl border border-slate-200 text-slate-600 text-xs leading-relaxed space-y-3">
+          <h3 className="font-extrabold text-slate-900 text-sm">
+            Privacy Policy & Disclaimer:
+          </h3>
+          <p>
+            <strong>Authorship Responsibility:</strong> Authors wishing to publish research papers and case reports or writing thesis done by us must submit genuine patient treatment and diagnosis reports, including diagnostic imaging, laboratory findings, progress updates, and medical history.
+          </p>
+          <p>
+            <strong>Methods & Integrity:</strong> We examine and interpret data, apply statistical analysis, conduct PubMed literature surveys, organize information scientifically, and structure manuscripts with original data. Authors retain full ethical responsibility for their clinical findings.
+          </p>
+        </div>
+
+      </div>
     </div>
   );
-};
-
-export default Contact;
+}
