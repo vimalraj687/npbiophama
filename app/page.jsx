@@ -75,7 +75,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-hero py-16 md:py-24 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Hero Column */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#2E3192] text-xs sm:text-sm font-semibold shadow-xs">
@@ -88,7 +88,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg text-slate-600 leading-relaxed font-normal">
-                Medical/Clinical Research Editing, Writing & Publication Services as per 
+                Medical/Clinical Research Editing, Writing & Publication Services as per
                 <strong className="text-[#142d53] font-bold"> New NMC Guidelines</strong> (formerly MCI) for MD, MS, DM, MCh, DNB, Ph.D. Scholars & Faculty Promotions.
               </p>
 
@@ -147,7 +147,7 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <div className="bg-[#142d53] text-white rounded-3xl p-8 shadow-2xl border border-blue-900 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#ce1836]/20 rounded-full blur-2xl pointer-events-none"></div>
-                
+
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400">
                   NMC Regulatory Notice
                 </span>
@@ -200,7 +200,7 @@ export default function HomePage() {
       {/* 2. Top Services Section */}
       <section className="py-16 md:py-24 bg-white border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#ce1836] bg-red-50 px-3 py-1 rounded-full border border-red-200">
               Our Core Offerings
@@ -214,7 +214,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             {/* Service 1 */}
             <div className="bg-slate-50 hover:bg-white rounded-2xl p-7 border border-slate-200 hover:border-[#2E3192] hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
               <div>
@@ -349,7 +349,116 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Why Choose Us (Previous Theme Section) */}
+      {/* 2.5 Overview Pillars: Medical Thesis, Medical Publication, Medical Book */}
+      <section className="py-14 md:py-20 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Top Banner Notice */}
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
+            <p className="text-base sm:text-lg font-bold text-[#142d53]">
+              Note: Manuscript preparation and Journal selection Assistance{" "}
+              <span className="text-[#ce1836] font-extrabold">(Charge Free)</span>
+            </p>
+            <p className="text-sm sm:text-base font-semibold text-slate-700">
+              Feel free to contact us at{" "}
+              <a
+                href="tel:+917991337001"
+                className="text-[#ce1836] font-extrabold hover:underline"
+              >
+                799-133-7001
+              </a>
+            </p>
+          </div>
+
+          {/* 3 Overview Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+            {/* Pillar 1: Medical Thesis */}
+            <div className="flex flex-col">
+              <div className="bg-[#fed7aa]/90 hover:bg-[#fed7aa] border border-orange-200/80 rounded-2xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex-1 flex flex-col justify-center">
+                <ul className="space-y-2.5 text-sm sm:text-base font-bold text-[#142d53]">
+                  {[
+                    "MD/MS/Thesis Writing",
+                    "Medical Statistics",
+                    "Data Interpretation",
+                    "Master Chart",
+                    "Abstract",
+                    "Paper Presentation",
+                    "Synopsis writing",
+                    "Thesis Editing",
+                    "Poster"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="text-[10px] text-[#142d53] mt-1 shrink-0">■</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <h3 className="text-center text-xl sm:text-2xl font-black text-[#006837] mt-4 tracking-wide">
+                Medical Thesis
+              </h3>
+            </div>
+
+            {/* Pillar 2: Medical Publication */}
+            <div className="flex flex-col">
+              <div className="bg-[#dbeafe]/90 hover:bg-[#dbeafe] border border-blue-200/80 rounded-2xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex-1 flex flex-col justify-center">
+                <ul className="space-y-2.5 text-sm sm:text-base font-bold text-[#142d53]">
+                  {[
+                    "Research Article",
+                    "Review Article",
+                    "Systematic Review",
+                    "Case studies",
+                    "Meta-analysis",
+                    "Original Papers",
+                    "Medical Statistics",
+                    "Editing & Proofreading",
+                    "Indexed Journal publication",
+                    "Free Guidance"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="text-[10px] text-[#142d53] mt-1 shrink-0">■</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <h3 className="text-center text-xl sm:text-2xl font-black text-[#006837] mt-4 tracking-wide">
+                Medical Publication
+              </h3>
+            </div>
+
+            {/* Pillar 3: Medical Book */}
+            <div className="flex flex-col">
+              <div className="bg-[#a6433b] hover:bg-[#993b33] border border-red-900/30 rounded-2xl p-7 shadow-sm hover:shadow-md transition-all duration-300 flex-1 flex flex-col justify-center text-white">
+                <ul className="space-y-2.5 text-sm sm:text-base font-bold text-white">
+                  {[
+                    "Book writing",
+                    "Chapter writing",
+                    "Book Publication with ISBN",
+                    "Book formatting",
+                    "Book cover page designing",
+                    "Original figure generation",
+                    "Life time royalty on books",
+                    "Royalty more than 50% on book selling"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="text-[10px] text-white mt-1 shrink-0">■</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <h3 className="text-center text-xl sm:text-2xl font-black text-[#006837] mt-4 tracking-wide">
+                Medical Book
+              </h3>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -409,7 +518,7 @@ export default function HomePage() {
       {/* 4. Core Editorial & Writing Team with Images */}
       <section className="py-16 md:py-24 bg-[#142d53] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 bg-[#232569] px-3.5 py-1.5 rounded-full border border-blue-800">
               Expert Leadership
@@ -423,7 +532,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
+
             {/* Editor 1: Dr. Navneet Kumar */}
             <div className="bg-[#1e293b]/90 rounded-3xl p-7 border border-blue-900 hover:border-[#4B4FC4] transition-all duration-300 flex flex-col justify-between">
               <div>
@@ -557,7 +666,7 @@ export default function HomePage() {
       {/* 5. Medical Specialties Section (40+ Departments) */}
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#2E3192] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
               NMC Recognized Departments
@@ -577,11 +686,10 @@ export default function HomePage() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    selectedCategory === cat
-                      ? "bg-[#2E3192] text-white shadow-xs"
-                      : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                  }`}
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all ${selectedCategory === cat
+                    ? "bg-[#2E3192] text-white shadow-xs"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    }`}
                 >
                   {cat}
                 </button>
@@ -629,9 +737,9 @@ export default function HomePage() {
       {/* 6. Manuscriptome Pointwise Preview */}
       <section className="py-16 md:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <div className="lg:col-span-6 space-y-6">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#ce1836] bg-red-50 px-3.5 py-1.5 rounded-full border border-red-200">
                 Knowledge Base & Writer&apos;s Guide
@@ -676,7 +784,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-bold text-amber-400 border-b border-blue-800 pb-3">
                   💡 Quick Medical Thesis Checklist
                 </h3>
-                
+
                 <div className="space-y-4 text-xs">
                   <div className="p-3.5 rounded-xl bg-[#232569] border border-blue-800">
                     <h4 className="font-bold text-amber-300 mb-1">1. PICOT Model for Research Question</h4>
@@ -707,90 +815,75 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Quick Contact & Inquiry Form */}
+      {/* 7. WhatsApp Contact CTA */}
       <section className="py-16 md:py-24 bg-slate-100">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl">
-            <div className="text-center mb-8">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-[#2E3192] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200">
-                Get In Touch
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#142d53] mt-2">
-                Need Help with Paper, Thesis, or Data Interpretation?
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-2">
-                Call or WhatsApp us directly at <strong className="text-[#2E3192]">+91 799-133-7001</strong> or submit your inquiry below.
-              </p>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl text-center relative overflow-hidden">
+
+            {/* Top color bar */}
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#2E3192] via-[#25D366] to-[#142d53]"></div>
+
+            {/* WhatsApp icon pulse */}
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <div className="w-20 h-20 rounded-full bg-[#25D366] flex items-center justify-center shadow-xl shadow-green-400/40">
+                  <svg className="w-10 h-10 fill-white" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                </div>
+                {/* Pulse ring */}
+                <div className="absolute inset-0 rounded-full bg-[#25D366]/30 animate-ping"></div>
+              </div>
             </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Thank you for your inquiry! Our team will contact you shortly.");
-              }}
-              className="space-y-4"
+            {/* Badge */}
+            <span className="inline-block text-xs font-extrabold uppercase tracking-widest text-[#2E3192] bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200 mb-3">
+              Get In Touch
+            </span>
+
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#142d53] mt-2 mb-3">
+              Need Help with Paper, Thesis, or Data Interpretation?
+            </h2>
+
+            <p className="text-sm text-slate-500 mb-8 max-w-xl mx-auto leading-relaxed">
+              Chat with our medical writing experts directly on WhatsApp. Share your research query, get an instant response, and start your project today — no forms, no waiting!
+            </p>
+
+            {/* WhatsApp CTA Button */}
+            <a
+              href="https://wa.me/917991337001?text=Hi%2C%20I%20need%20help%20with%20my%20medical%20research%20paper%2F%20thesis.%20Please%20guide%20me."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 rounded-2xl bg-[#25D366] hover:bg-[#1ebe5d] text-white font-extrabold text-base shadow-xl shadow-green-400/30 hover:shadow-green-400/50 transition-all duration-200 hover:-translate-y-1 active:scale-95"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Dr. Full Name"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192] focus:outline-hidden"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">Mobile / WhatsApp Number *</label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="+91 9876543210"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192] focus:outline-hidden"
-                  />
-                </div>
-              </div>
+              <svg className="w-6 h-6 fill-white shrink-0" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+              </svg>
+              Chat on WhatsApp — +91 799-133-7001
+            </a>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="doctor@gmail.com"
-                    className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192] focus:outline-hidden"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">Service Required *</label>
-                  <select className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192] focus:outline-hidden">
-                    <option>MD/MS Research Paper Writing & Publication</option>
-                    <option>Systematic Review & Meta-Analysis</option>
-                    <option>PG / MD / MS Thesis & Dissertation</option>
-                    <option>Medical Statistics & SPSS Analysis</option>
-                    <option>Book Writing & Publication with ISBN</option>
-                    <option>Grant & Project Proposal Writing</option>
-                    <option>Other Medical Writing Query</option>
-                  </select>
-                </div>
-              </div>
+            {/* Divider */}
+            <div className="flex items-center gap-3 my-6">
+              <div className="flex-1 h-px bg-slate-200"></div>
+              <span className="text-xs text-slate-400 font-semibold">OR CALL DIRECTLY</span>
+              <div className="flex-1 h-px bg-slate-200"></div>
+            </div>
 
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1">Project Details / Message</label>
-                <textarea
-                  rows={4}
-                  placeholder="Tell us about your study title, target department, or data available..."
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-[#2E3192] focus:outline-hidden"
-                ></textarea>
-              </div>
+            {/* Call CTA */}
+            <a
+              href="tel:+917991337001"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl bg-[#142d53] hover:bg-[#2E3192] text-white font-bold text-sm shadow-md transition-all duration-200 hover:-translate-y-0.5 active:scale-95"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call: +91 799-133-7001
+            </a>
 
-              <button
-                type="submit"
-                className="w-full py-3.5 px-6 rounded-xl bg-[#2E3192] hover:bg-[#232569] text-white font-bold text-sm shadow-md transition-all active:scale-95"
-              >
-                Submit Consultation Request →
-              </button>
-            </form>
+            <p className="text-[11px] text-slate-400 mt-5">
+              Available Mon – Sat, 9 AM – 8 PM IST &nbsp;•&nbsp; Typically responds within 10 minutes
+            </p>
+
           </div>
         </div>
       </section>

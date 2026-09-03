@@ -1,16 +1,79 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(true);
   const pathname = usePathname();
+  const dropdownTimeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+    setIsServicesDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setIsServicesDropdownOpen(false);
+    }, 150);
+  };
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Services List", href: "/services" },
+    {
+      name: "Services List",
+      href: "/services",
+      hasDropdown: true,
+      subLinks: [
+        {
+          name: "All Services Overview",
+          href: "/services",
+          desc: "Complete list of manuscript, thesis & publication services",
+          icon: (
+            <svg className="w-5 h-5 text-[#2E3192]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+            </svg>
+          )
+        },
+        {
+          name: "Medical Synopsis Protocol",
+          href: "/medical-synopsis-protocol",
+          badge: "Coming Soon",
+          desc: "NMC compliant protocol & synopsis drafting",
+          icon: (
+            <svg className="w-5 h-5 text-[#2E3192]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          )
+        },
+        {
+          name: "Medical Conference Posters",
+          href: "/medical-conference-posters",
+          badge: "Coming Soon",
+          desc: "Scientific e-posters & print layout designs",
+          icon: (
+            <svg className="w-5 h-5 text-[#ce1836]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          )
+        },
+        {
+          name: "Medical Conference PPT Presentation",
+          href: "/medical-conference-ppt",
+          badge: "Coming Soon",
+          desc: "Keynote slide decks & oral paper defense",
+          icon: (
+            <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+            </svg>
+          )
+        },
+      ]
+    },
     { name: "Medical Specialties", href: "/topics" },
     { name: "Editorial Team", href: "/team" },
     { name: "Pointwise Guide", href: "/pointwise" },
@@ -96,6 +159,82 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center space-x-1">
             {navLinks.map((link) => {
+              if (link.hasDropdown) {
+                const isChildActive = link.subLinks.some(sub => pathname === sub.href);
+                return (
+                  <div
+                    key={link.name}
+                    className="relative group py-6"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Link
+                      href={link.href}
+                      className={`px-3.5 py-2 rounded-lg text-sm font-semibold transition-all duration-150 flex items-center gap-1.5 ${
+                        isChildActive || pathname === link.href
+                          ? "text-[#2E3192] bg-blue-50 font-bold"
+                          : "text-slate-700 hover:text-[#2E3192] hover:bg-slate-50"
+                      }`}
+                    >
+                      <span>{link.name}</span>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isServicesDropdownOpen ? "rotate-180 text-[#2E3192]" : "text-slate-400"
+                        }`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </Link>
+
+                    {/* Dropdown Menu Card */}
+                    {isServicesDropdownOpen && (
+                      <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-3 py-2 border-b border-slate-100">
+                          Services & Offerings
+                        </div>
+                        <div className="mt-1 space-y-1">
+                          {link.subLinks.map((sub) => {
+                            const isSubActive = pathname === sub.href;
+                            return (
+                              <Link
+                                key={sub.name}
+                                href={sub.href}
+                                onClick={() => setIsServicesDropdownOpen(false)}
+                                className={`flex items-start gap-3 p-2.5 rounded-xl transition-all ${
+                                  isSubActive
+                                    ? "bg-blue-50/80 text-[#2E3192]"
+                                    : "hover:bg-slate-50 text-slate-700 hover:text-[#2E3192]"
+                                }`}
+                              >
+                                <div className="p-2 rounded-lg bg-slate-100 shrink-0 mt-0.5">
+                                  {sub.icon}
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center justify-between gap-1">
+                                    <span className="text-xs font-bold truncate">{sub.name}</span>
+                                    {sub.badge && (
+                                      <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300/80 shrink-0">
+                                        {sub.badge}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-[11px] text-slate-400 leading-tight mt-0.5 line-clamp-1">
+                                    {sub.desc}
+                                  </p>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
               const isActive = pathname === link.href;
               return (
                 <Link
@@ -143,20 +282,67 @@ export default function Header() {
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
         <div className="xl:hidden bg-white border-t border-slate-100 shadow-2xl px-4 pt-3 pb-6 space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`block px-4 py-2.5 rounded-xl text-base font-semibold transition-colors ${
-                pathname === link.href
-                  ? "text-[#2E3192] bg-blue-50"
-                  : "text-slate-700 hover:bg-slate-50 hover:text-[#2E3192]"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.hasDropdown) {
+              return (
+                <div key={link.name} className="space-y-1">
+                  <button
+                    onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                    className="w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-base font-semibold text-slate-700 hover:bg-slate-50 hover:text-[#2E3192] transition-colors"
+                  >
+                    <span className="font-bold text-[#2E3192]">{link.name}</span>
+                    <svg
+                      className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {isMobileServicesOpen && (
+                    <div className="pl-4 space-y-1 border-l-2 border-blue-100 ml-3 my-1">
+                      {link.subLinks.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          href={sub.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                            pathname === sub.href
+                              ? "text-[#2E3192] bg-blue-50 font-bold"
+                              : "text-slate-600 hover:bg-slate-50 hover:text-[#2E3192]"
+                          }`}
+                        >
+                          <span>{sub.name}</span>
+                          {sub.badge && (
+                            <span className="text-[10px] font-extrabold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-800 border border-amber-300">
+                              {sub.badge}
+                            </span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block px-4 py-2.5 rounded-xl text-base font-semibold transition-colors ${
+                  pathname === link.href
+                    ? "text-[#2E3192] bg-blue-50"
+                    : "text-slate-700 hover:bg-slate-50 hover:text-[#2E3192]"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
             <Link
               href="/contact"

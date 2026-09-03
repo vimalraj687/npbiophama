@@ -44,6 +44,24 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/medical-synopsis-protocol" className="hover:text-amber-400 transition-colors flex items-center justify-between">
+                  <span>Medical Synopsis Protocol</span>
+                  <span className="text-[10px] bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded">Soon</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/medical-conference-posters" className="hover:text-amber-400 transition-colors flex items-center justify-between">
+                  <span>Medical Conference Posters</span>
+                  <span className="text-[10px] bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded">Soon</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/medical-conference-ppt" className="hover:text-amber-400 transition-colors flex items-center justify-between">
+                  <span>Medical Conference PPT</span>
+                  <span className="text-[10px] bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded">Soon</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/topics" className="hover:text-amber-400 transition-colors">
                   40+ Medical Specialties
                 </Link>
